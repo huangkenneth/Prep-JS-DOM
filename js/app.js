@@ -1,9 +1,9 @@
 window.onload = function(){
 
-//Example
+// Example
 var el = document.createElement('h1'); //creating a "h1" element (h1 heading)
 el.id = "headline"; //creating an identifier for the 'h1' element
-el.innerHTML = "Welcome to Tacocat's internet page."; //adding content to the h1 element
+el.innerHTML = "Welcome to Kenneth's internet page."; //adding content to the h1 element
 container.appendChild(el); //adds the h1 element to the container div element.
 
 //Exercise 1: 
@@ -14,6 +14,10 @@ Next, add the following text inside this newly created 'div' element:
 
 Append this 'div' element inside the "bigBox" div element that has already been created in the index.html file*/
 
+var catBox = document.createElement('div');
+catBox.id = "meow";
+catBox.innerHTML = 'Overcome its fear of cucmbers!';
+bigBox.appendChild(catBox);
 
 /*Helpful Hints:
 document.createElement creates an Element node
@@ -28,7 +32,10 @@ node.appendChild() is a method that appends a node as the last child of a node*/
 
 Append this newly created element to the bigBox element.*/
 
-
+var catBox2 = document.createElement('p');
+catBox2.id = 'purr';
+catBox2.innerHTML = 'Audition for the next musical.';
+bigBox.appendChild(catBox2);
 
 //Exercise 3
 /*Your objective is to display the following getBuckets array into the document. 
@@ -42,6 +49,29 @@ element.className is a property that sets or returns the class name of an elemen
 
 var getBuckets = ["Become more famous than that overrated fraud Garfield", "Visit Aoshima (aka Japan's Cat Island)", "Exhaust my entire 9 lives", "Pass DevLeague's coding challenge", "Become the next internet sensation", "eat tacos", "Buy Vic a bottle of Hendricks Gin" ];
 
+// function list(words){
+for (i=0; i<getBuckets.length; i++){
+	console.log(getBuckets[i]);
+
+	var bucketList = document.createElement('li');
+	bucketList.className = 'daList';
+	bucketList.innerHTML = getBuckets[i];
+	buckets.appendChild(bucketList);
+	}
+// }
+// list(getBuckets);
+
+
+
+
+
+
+// function list(){
+// 	for (i=0; i<getBuckets.length; i++){
+// 		// document.write(getBuckets[i]);
+// 	}
+// }
+// // list(getBuckets);
 
 
 //Exerise 4
