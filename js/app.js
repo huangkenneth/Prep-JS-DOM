@@ -35,7 +35,7 @@ Append this newly created element to the bigBox element.*/
 var catBox2 = document.createElement('p');
 catBox2.id = 'purr';
 catBox2.innerHTML = 'Audition for the next musical.';
-bigBox.appendChild(catBox2);
+catBox.appendChild(catBox2);
 
 //Exercise 3
 /*Your objective is to display the following getBuckets array into the document. 
@@ -49,17 +49,17 @@ element.className is a property that sets or returns the class name of an elemen
 
 var getBuckets = ["Become more famous than that overrated fraud Garfield", "Visit Aoshima (aka Japan's Cat Island)", "Exhaust my entire 9 lives", "Pass DevLeague's coding challenge", "Become the next internet sensation", "eat tacos", "Buy Vic a bottle of Hendricks Gin" ];
 
-// function list(words){
-for (i=0; i<getBuckets.length; i++){
-	console.log(getBuckets[i]);
+function list(words){
+	for (i=0; i<words.length; i++){
+		console.log(words[i]);
 
-	var bucketList = document.createElement('li');
-	bucketList.className = 'daList';
-	bucketList.innerHTML = getBuckets[i];
-	buckets.appendChild(bucketList);
+		var bucketList = document.createElement('li');
+		bucketList.className = 'daList';
+		bucketList.innerHTML = words[i];
+		buckets.appendChild(bucketList);
 	}
-// }
-// list(getBuckets);
+}
+list(getBuckets);
 
 
 // function list(){
@@ -89,6 +89,9 @@ var changeList = document.getElementsByTagName('li')[0].innerHTML="I'm coming fo
 "Exhaust my entire 9 lives" => "I got 1 life to live!"*/
 
 var changeListAgain = document.getElementsByClassName('daList')[2].innerHTML = "I got 1 life to live!";
+
+
+// console.log(changeList);
 };
 
 
